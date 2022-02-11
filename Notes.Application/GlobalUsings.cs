@@ -5,4 +5,7 @@ global using System.Text;
 global using System.Threading.Tasks;
 global using Microsoft.EntityFrameworkCore;
 global using Notes.Domain;
+global using AutoMapper;
+
+
 
