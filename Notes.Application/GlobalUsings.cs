@@ -12,3 +12,5 @@ global using Notes.Application.Common.Exceptions;
 global using Notes.Application.Common.Mapping;
 global using System.Reflection;
 global using AutoMapper.QueryableExtensions;
+global using Microsoft.Extensions.DependencyInjection;
+

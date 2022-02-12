@@ -1,6 +1,5 @@
 ﻿namespace Notes.Application.Notes.Commands.DeleteNote;
-public class DeleteNoteCommandHandler
-    : IRequestHandler<DeleteNoteCommand>
+public class DeleteNoteCommandHandler : IRequestHandler<DeleteNoteCommand>
 {
     private readonly INotesDbContext _dbContext;
 
@@ -11,7 +10,8 @@ public class DeleteNoteCommandHandler
 
     public async Task<Unit> Handle(DeleteNoteCommand request, CancellationToken cancellationToken)
     {
-        Note? entity = await _dbContext.Notes.FindAsync(new object[] { request.Id }, cancellationToken);
+        Note? entity = await _dbContext.Notes
+            .FindAsync(new object[] { request.Id }, cancellationToken);
 
         if (entity == null || entity.UserId != request.UserId)
         {

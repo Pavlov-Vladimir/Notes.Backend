@@ -15,7 +15,7 @@ public class GetNoteListQueryHandler : IRequestHandler<GetNoteListQuery, NoteLis
         var notesQuery = await _dbContext.Notes
             .Where(note => note.UserId == request.UserId)
             .ProjectTo<NoteLookupDto>(_mapper.ConfigurationProvider)
-            .ToListAsync();
+            .ToListAsync(cancellationToken);
 
         return new NoteListVm { Notes = notesQuery };
     }

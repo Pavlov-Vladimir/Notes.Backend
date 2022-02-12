@@ -2,7 +2,7 @@
 
 public class DbInitializer
 {
-    public static void Initialize(NotesDbContex contex)
+    public static void Initialize(NotesDbContext contex)
     {
         contex.Database.EnsureCreated();
     }

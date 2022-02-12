@@ -10,7 +10,8 @@ public class UpdateNoteCommandHandler : IRequestHandler<UpdateNoteCommand>
 
     public async Task<Unit> Handle(UpdateNoteCommand request, CancellationToken cancellationToken)
     {
-        Note? entity = await _dbContext.Notes.FirstOrDefaultAsync(note => note.Id == request.Id, cancellationToken);
+        Note? entity = await _dbContext.Notes
+            .FirstOrDefaultAsync(note => note.Id == request.Id, cancellationToken);
 
         if (entity == null || entity.UserId != request.UserId)
         {

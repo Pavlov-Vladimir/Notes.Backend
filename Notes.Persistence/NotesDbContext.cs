@@ -1,10 +1,10 @@
 ﻿namespace Notes.Persistence;
 
-public class NotesDbContex : DbContext, INotesDbContext
+public class NotesDbContext : DbContext, INotesDbContext
 {
     public DbSet<Note> Notes { get; set; } = null!;
 
-    public NotesDbContex(DbContextOptions<NotesDbContex> options)
+    public NotesDbContext(DbContextOptions<NotesDbContext> options)
         : base(options) { }
 
     protected override void OnModelCreating(ModelBuilder builder)
