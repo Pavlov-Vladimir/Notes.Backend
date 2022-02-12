@@ -2,7 +2,7 @@
 
 public class NotesDbContex : DbContext, INotesDbContext
 {
-    public DbSet<Note> Notes { get; set; }
+    public DbSet<Note> Notes { get; set; } = null!;
 
     public NotesDbContex(DbContextOptions<NotesDbContex> options)
         : base(options) { }

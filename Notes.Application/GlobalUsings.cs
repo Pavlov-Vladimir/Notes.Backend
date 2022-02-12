@@ -6,6 +6,9 @@ global using System.Threading.Tasks;
 global using Microsoft.EntityFrameworkCore;
 global using Notes.Domain;
 global using AutoMapper;
-
-
-
+global using MediatR;
+global using Notes.Application.Interfaces;
+global using Notes.Application.Common.Exceptions;
+global using Notes.Application.Common.Mapping;
+global using System.Reflection;
+global using AutoMapper.QueryableExtensions;

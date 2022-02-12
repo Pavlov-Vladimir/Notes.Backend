@@ -1,6 +1,4 @@
-﻿using System.Reflection;
-
-namespace Notes.Application.Common.Mapping;
+﻿namespace Notes.Application.Common.Mapping;
 public class AssemblyMappingProfile : Profile
 {
     public AssemblyMappingProfile(Assembly assembly)
