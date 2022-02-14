@@ -23,4 +23,7 @@ global using Notes.Application.Notes.Commands.CreateNote;
 global using Notes.Application.Notes.Commands.UpdateNote;
 global using Notes.Application.Notes.Commands.DeleteNote;
 global using Notes.WebApi.Models;
-
+global using FluentValidation;
+global using System.Net;
+global using System.Text.Json;
+global using Notes.WebApi.Middleware;

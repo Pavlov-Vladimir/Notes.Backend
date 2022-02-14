@@ -39,6 +39,8 @@ using (IServiceScope scope = app.Services.CreateScope())
     }
 }
 
+app.UseCustomExceptionHandler();
+
 app.UseRouting();
 app.UseHttpsRedirection();
 app.UseCors("AllowAll");
