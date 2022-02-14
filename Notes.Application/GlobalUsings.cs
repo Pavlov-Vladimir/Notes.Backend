@@ -13,4 +13,6 @@ global using Notes.Application.Common.Mapping;
 global using System.Reflection;
 global using AutoMapper.QueryableExtensions;
 global using Microsoft.Extensions.DependencyInjection;
+global using FluentValidation;
+global using Notes.Application.Common.Behaviors;
 
