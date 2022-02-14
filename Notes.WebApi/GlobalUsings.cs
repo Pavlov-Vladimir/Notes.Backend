@@ -15,6 +15,12 @@ global using AutoMapper.QueryableExtensions;
 global using Microsoft.Extensions.DependencyInjection;
 global using Notes.Persistence;
 global using Notes.Application;
-
-
+global using Microsoft.AspNetCore.Mvc;
+global using System.Security.Claims;
+global using Notes.Application.Notes.Queries.GetNoteDetails;
+global using Notes.Application.Notes.Queries.GetNoteList;
+global using Notes.Application.Notes.Commands.CreateNote;
+global using Notes.Application.Notes.Commands.UpdateNote;
+global using Notes.Application.Notes.Commands.DeleteNote;
+global using Notes.WebApi.Models;
 

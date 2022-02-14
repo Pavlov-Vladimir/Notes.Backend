@@ -11,6 +11,7 @@ services.AddAutoMapper(config =>
 
 services.AddApplication();
 services.AddPersistence(configuration);
+services.AddControllers();
 
 services.AddCors(options =>
 {
