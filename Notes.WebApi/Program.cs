@@ -23,6 +23,18 @@ services.AddCors(options =>
     });
 });
 
+services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+    .AddJwtBearer("Bearer", config =>
+    {
+        config.Authority = "https://localhost:7123";
+        config.Audience = "NotesWebAPI";
+        config.RequireHttpsMetadata = false;
+    });
+
 var app = builder.Build();
 
 using (IServiceScope scope = app.Services.CreateScope())
@@ -40,10 +52,11 @@ using (IServiceScope scope = app.Services.CreateScope())
 }
 
 app.UseCustomExceptionHandler();
-
 app.UseRouting();
 app.UseHttpsRedirection();
 app.UseCors("AllowAll");
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.UseEndpoints(endpoints =>
 {
