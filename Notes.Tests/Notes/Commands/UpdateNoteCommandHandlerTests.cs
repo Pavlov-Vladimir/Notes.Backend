@@ -1,6 +1,4 @@
-﻿using Notes.Application.Notes.Commands.UpdateNote;
-
-namespace Notes.Tests.Notes.Commands;
+﻿namespace Notes.Tests.Notes.Commands;
 public class UpdateNoteCommandHandlerTests : TestCommandBase
 {
     [Fact]

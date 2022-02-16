@@ -12,4 +12,10 @@ global using System.Threading;
 global using Xunit;
 global using Notes.Application.Common.Exceptions;
 global using Notes.Application.Notes.Commands.DeleteNote;
+global using AutoMapper;
+global using Notes.Application.Common.Mapping;
+global using Notes.Application.Interfaces;
+global using Notes.Application.Notes.Queries.GetNoteList;
+global using Shouldly;
+global using Notes.Application.Notes.Commands.UpdateNote;
 
