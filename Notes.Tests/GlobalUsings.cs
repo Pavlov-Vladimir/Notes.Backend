@@ -18,4 +18,4 @@ global using Notes.Application.Interfaces;
 global using Notes.Application.Notes.Queries.GetNoteList;
 global using Shouldly;
 global using Notes.Application.Notes.Commands.UpdateNote;
-
+global using Notes.Application.Notes.Queries.GetNoteDetails;

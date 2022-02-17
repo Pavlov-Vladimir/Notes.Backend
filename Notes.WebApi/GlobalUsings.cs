@@ -29,3 +29,4 @@ global using System.Text.Json;
 global using Notes.WebApi.Middleware;
 global using Microsoft.AspNetCore.Authorization;
 global using Microsoft.AspNetCore.Authentication.JwtBearer;
+global using System.ComponentModel.DataAnnotations;

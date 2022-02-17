@@ -1,6 +1,4 @@
-﻿using Notes.Application.Notes.Queries.GetNoteDetails;
-
-namespace Notes.Tests.Notes.Queries;
+﻿namespace Notes.Tests.Notes.Queries;
 
 [Collection("QueryCollection")]
 public class GetNoteDetailsQueryHandlerTests

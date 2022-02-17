@@ -1,6 +1,7 @@
 ﻿namespace Notes.WebApi.Models;
 public class CreateNoteDto : IMapWith<CreateNoteCommand>
 {
+    [Required]
     public string Title { get; set; } = null!;
     public string Details { get; set; } = null!;
 

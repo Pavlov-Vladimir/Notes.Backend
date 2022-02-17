@@ -26,7 +26,7 @@ public class CustomExceptionHandlerMiddleware
         string result = string.Empty;
         switch (exception)
         {
-            case ValidationException validationException:
+            case FluentValidation.ValidationException validationException:
                 code = HttpStatusCode.BadRequest;
                 result = JsonSerializer.Serialize(validationException.Errors);
                 break;
