@@ -1,6 +1,4 @@
-﻿using Notes.Application.Common.Behaviors;
-
-namespace Notes.Application;
+﻿namespace Notes.Application;
 public static class DependencyInjection
 {
     public static IServiceCollection AddApplication(this IServiceCollection services)

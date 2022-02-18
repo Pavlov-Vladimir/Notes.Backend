@@ -35,6 +35,7 @@ services.AddAuthentication(options =>
         config.RequireHttpsMetadata = false;
     });
 
+services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerPasswordOptions>();
 services.AddSwaggerGen(config =>
 {
     string xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
