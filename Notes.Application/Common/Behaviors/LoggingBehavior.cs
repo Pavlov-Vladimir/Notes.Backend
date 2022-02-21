@@ -1,10 +1,10 @@
 ﻿namespace Notes.Application.Common.Behaviors;
-public class LogginBehavior<TRequest, TResponse>
+public class LoggingBehavior<TRequest, TResponse>
     : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
 {
     private readonly ICurrentUserService _currentUserService;
 
-    public LogginBehavior(ICurrentUserService currentUserService)
+    public LoggingBehavior(ICurrentUserService currentUserService)
     {
         _currentUserService = currentUserService;
     }
