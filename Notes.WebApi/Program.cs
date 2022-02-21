@@ -1,4 +1,11 @@
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
+    .WriteTo.File("NotesWebAppLog-.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Host.UseSerilog();
 
 IServiceCollection services = builder.Services;
 IConfiguration configuration = builder.Configuration;
@@ -43,6 +50,9 @@ services.AddSwaggerGen(config =>
     config.IncludeXmlComments(xmlPath);
 });
 
+services.AddSingleton<ICurrentUserService, CurrentUserService>();
+services.AddHttpContextAccessor();
+
 var app = builder.Build();
 
 using (IServiceScope scope = app.Services.CreateScope())
@@ -53,9 +63,13 @@ using (IServiceScope scope = app.Services.CreateScope())
         var context = serviceProvider.GetRequiredService<NotesDbContext>();
         DbInitializer.Initialize(context);
     }
-    catch (Exception ex)
+    catch (Exception exception)
     {
-
+        Log.Fatal(exception, "An error occurred while application initialization");
+    }
+    finally
+    {
+        Log.CloseAndFlush();
     }
 }
 

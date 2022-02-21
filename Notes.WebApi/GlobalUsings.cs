@@ -19,6 +19,9 @@ global using Notes.Persistence;
 global using Notes.WebApi;
 global using Notes.WebApi.Middleware;
 global using Notes.WebApi.Models;
+global using Notes.WebApi.Services;
+global using Serilog;
+global using Serilog.Events;
 global using Swashbuckle.AspNetCore.SwaggerGen;
 global using System;
 global using System.Collections.Generic;
@@ -28,4 +31,3 @@ global using System.Reflection;
 global using System.Security.Claims;
 global using System.Text.Json;
 global using System.Threading.Tasks;
-

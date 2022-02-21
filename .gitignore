@@ -10,6 +10,13 @@
 *.userosscache
 *.sln.docstates
 
+# DataBase
+Platinum.Notes.*
+Platinum.Notes.db
+
+# Logs
+NotesWebAppLog-*.txt
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 

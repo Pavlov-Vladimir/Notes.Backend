@@ -73,12 +73,12 @@ public class NoteController : BaseController
     [Authorize]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-    public async Task<ActionResult<Guid>> PostAsync([FromBody] CreateNoteDto createNoteDto)
+    public async Task<ActionResult<Guid>> Create([FromBody] CreateNoteDto createNoteDto)
     {
         var command = _mapper.Map<CreateNoteCommand>(createNoteDto);
         command.UserId = UserId;
         var noteId = await Mediator.Send(command);
-        return Ok(noteId);
+        return Created(noteId.ToString(), noteId);
     }
 
     /// <summary>
